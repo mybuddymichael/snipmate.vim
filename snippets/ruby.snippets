@@ -404,13 +404,9 @@ snippet opt
 		${6}
 	end
 snippet tc
-	require "test/unit"
-
-	require "${1:library_file_name}"
-
-	class Test${2:$1} < Test::Unit::TestCase
-		def test_${3:case_name}
-			${4}
+	class Test${1:class_name} < MiniTest::Unit::TestCase
+		def test_${2:case_name}
+			${3}
 		end
 	end
 snippet ts
